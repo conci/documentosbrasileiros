@@ -39,7 +39,7 @@ jobs:
       
     - name: Publish nuget package
       if: github.ref == 'refs/heads/master'
-      run: find . -name *.nupkg -type f -print0 | xargs -0 -I pkg dotnet nuget push pkg -k $nuget_api_key -s "https://api.nuget.org/v3/index.json"
+      run: find . -name *.nupkg -type f -print0 | xargs -0 -I pkg dotnet nuget push pkg -k $nuget_api_key -s "https://api.nuget.org/v3/index.json" --skip-duplicate
       env:
         nuget_api_key: ${{ secrets.NUGET_API_KEY }}
         working-directory: ./DocumentosBrasileiros/nupkg
