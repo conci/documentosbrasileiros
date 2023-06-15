@@ -34,6 +34,7 @@ jobs:
     
     - name: Generate nuget package
       working-directory: ./DocumentosBrasileiros
+      if: github.ref == 'refs/heads/master'
       run: dotnet pack --configuration Release -o nupkg
       
     - name: Publish nuget package
