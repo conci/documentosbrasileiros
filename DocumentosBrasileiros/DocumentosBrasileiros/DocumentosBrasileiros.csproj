@@ -1,18 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6</TargetFramework>
-    <Description>Validação e criação de números de documentos brasileiros, como CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</Description>
-    <Authors>Thiago Guttierre</Authors>
-    <Company>Thiago Guttierre</Company>
-    <Copyright></Copyright>
-    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/thiagoguttierre/documentosbrasileiros</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/thiagoguttierre/documentosbrasileiros</RepositoryUrl>
-    <RepositoryType />
-    <PackageTags>Validação de Documentos Brasileitos, CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</PackageTags>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>2.0.2</Version>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6</TargetFramework>
+		
+		<PackageId>DocumentosBrasileirosFork</PackageId>
+		<Authors>Conci</Authors>
+		<Description>Forked from DocumentosBrasileiros v2.0.2. Validação e criação de números de documentos brasileiros, como CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</Description>
+		<PackageTags>Validação de Documentos Brasileiros, CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</PackageTags>
+		<Version>1.0.0</Version>
+		
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+	</ItemGroup>
 
 </Project>
