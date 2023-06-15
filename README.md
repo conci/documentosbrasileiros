@@ -7,7 +7,7 @@ Desenvolvido em ASP.NET Core
 
 ### Instalação
 ```
-Install-Package DocumentosBrasileiros
+Install-Package DocumentosBrasileirosFork
 ```
 
 ### Validando um documento:
