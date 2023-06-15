@@ -12,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3.5.3
       
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v3.2.0
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 6.x
       
     - name: Install dependencies
       working-directory: ./DocumentosBrasileiros
