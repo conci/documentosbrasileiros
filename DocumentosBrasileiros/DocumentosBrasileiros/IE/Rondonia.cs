@@ -9,6 +9,8 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.RO;
 
+        public int Tamanho => 9;
+
         private readonly int[] pesoIEAntiga = { 6, 5, 4, 3, 2 };
         private readonly int[] pesoIENova = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
         public bool Validar(string inscricaoEstadual)

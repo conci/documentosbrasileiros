@@ -16,6 +16,8 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.TO;
 
+        public int Tamanho => 9;
+
         private readonly int[] peso = { 9, 8, 7, 6, 5, 4, 3, 2 };
         private readonly IList<string> T = new List<string> {
             "01" /*Produto Rural*/ ,

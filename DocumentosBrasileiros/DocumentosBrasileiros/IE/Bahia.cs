@@ -10,6 +10,8 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.BA;
 
+        public int Tamanho => 9;
+
         private readonly int[] _pesoDigito2 = { 8, 7, 6, 5, 4, 3, 2 };
         private readonly int[] _pesoDigito1 = { 9, 8, 7, 6, 5, 4, 3, 2 };
 

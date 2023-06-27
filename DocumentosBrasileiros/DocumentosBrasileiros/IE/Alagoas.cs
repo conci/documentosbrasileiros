@@ -17,13 +17,14 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.AL;
 
+        public int Tamanho => 9;
 
         private readonly int[] _tiposEmpresa = { 0, 3, 5, 7, 8, 4, 2, 1 };
         private readonly int[] _pesos = { 9, 8, 7, 6, 5, 4, 3, 2 };
 
         public bool Validar(string inscricaoEstadual)
         {
-            if (inscricaoEstadual.Length != 9) return false;
+            if (inscricaoEstadual.Length != Tamanho) return false;
 
             if (!inscricaoEstadual.StartsWith("24")) return false;
 

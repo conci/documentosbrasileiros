@@ -6,6 +6,8 @@ namespace DocumentosBrasileiros.Interfaces
     {
         UfEnum UfEnum { get; }
 
+        int Tamanho { get; }
+
         bool Validar(string inscricaoEstadual);
         string GerarFake();
     }

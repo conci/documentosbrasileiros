@@ -8,11 +8,13 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.AC;
 
+        public int Tamanho => 13;
+
         private readonly int[] _peso = { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
 
         public bool Validar(string inscricaoEstadual)
         {
-            if (inscricaoEstadual.Length != 13 || !inscricaoEstadual.StartsWith("01")) return false;
+            if (inscricaoEstadual.Length != Tamanho || !inscricaoEstadual.StartsWith("01")) return false;
 
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 11);
 

@@ -9,10 +9,12 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.RJ;
 
+        public int Tamanho => 8;
+
         private readonly int[] peso = { 2, 7, 6, 5, 4, 3, 2 };
         public bool Validar(string inscricaoEstadual)
         {
-            if (inscricaoEstadual.Length != 8) return false;
+            if (inscricaoEstadual.Length != Tamanho) return false;
 
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 7);
 

@@ -34,7 +34,15 @@ namespace DocumentosBrasileiros
                 throw new Exception("A UF do documento não foi informada");
             }
 
-            return Numero.ToUpper().Equals("ISENTO") || GetEstado().Validar(Numero);
+            if (Numero.ToUpper().Equals("ISENTO"))
+                return true;
+
+            var estado = GetEstado();
+
+            if (Numero.Length < estado.Tamanho)               
+                Numero = Numero.PadLeft(estado.Tamanho, '0');
+            
+            return estado.Validar(Numero);
         }
 
         public override string GerarFake()
