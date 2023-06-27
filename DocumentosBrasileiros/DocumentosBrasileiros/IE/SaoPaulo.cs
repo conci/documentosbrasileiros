@@ -8,6 +8,8 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.SP;
 
+        public int Tamanho => 12;
+
         private readonly int[] pesos1 = { 1, 3, 4, 5, 6, 7, 8, 0 };
         private readonly int[] pesos2 = { 3, 2, 0, 9, 8, 7, 6, 5, 4, 3, 2 };
         public bool Validar(string valor)

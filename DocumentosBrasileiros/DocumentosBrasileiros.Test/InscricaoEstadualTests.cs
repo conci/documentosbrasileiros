@@ -42,6 +42,13 @@ namespace DocumentosBrasileiros.Test
         }
 
         [TestMethod]
+        public void ValidacaoIe_MT()
+        {
+            var doc = new InscricaoEstadual("138140278", Enums.UfEnum.MT);
+            Assert.IsTrue(doc.DocumentoValido());
+        }
+
+        [TestMethod]
         public void ValidacaoIe_Ba()
         {
             var errors = new List<string>();

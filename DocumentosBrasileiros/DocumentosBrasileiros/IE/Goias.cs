@@ -15,9 +15,11 @@ namespace DocumentosBrasileiros.IE
     {
         public UfEnum UfEnum => UfEnum.GO;
 
+        public int Tamanho => 9;
+
         public bool Validar(string inscricaoEstadual)
         {
-            if (inscricaoEstadual.Length != 9) return false;
+            if (inscricaoEstadual.Length != Tamanho) return false;
 
             string ab = inscricaoEstadual.Substring(0, 2);
             if (ab != "10" && ab != "11" && ab != "15") return false;
