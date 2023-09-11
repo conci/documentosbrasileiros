@@ -7,7 +7,7 @@
 		<Authors>Conci</Authors>
 		<Description>Forked from DocumentosBrasileiros v2.0.2. Validação e criação de números de documentos brasileiros, como CNH, CPF, PIS, CNPJ, Renavam e Inscrição Estadual</Description>
 		<PackageTags>Validação, Documentos, Brasil, CNH, CPF, PIS, CNPJ, Renavam, Inscrição Estadual</PackageTags>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		
 		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>

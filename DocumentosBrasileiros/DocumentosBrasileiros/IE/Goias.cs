@@ -22,7 +22,7 @@ namespace DocumentosBrasileiros.IE
             if (inscricaoEstadual.Length != Tamanho) return false;
 
             string ab = inscricaoEstadual.Substring(0, 2);
-            if (ab != "10" && ab != "11" && ab != "15") return false;
+            if (ab != "10" && ab != "11" && !(int.Parse(ab) >= 20 && int.Parse(ab) <= 29)) return false;
 
             string inscricaoSemDigito = inscricaoEstadual.Substring(0, 8);//Remover o dígito verificador
             int digitoEsperado = int.Parse(inscricaoEstadual.Substring(8, 1));
@@ -73,7 +73,7 @@ namespace DocumentosBrasileiros.IE
 
             Random rnd = new Random();
 
-            string[] ab = { "10", "11", "15" };
+            string[] ab = { "10", "11", "20" };
 
             double _ab = rnd.NextDouble();
             if (_ab < 0.33) { inscricaoSemDigito += ab[0]; }
