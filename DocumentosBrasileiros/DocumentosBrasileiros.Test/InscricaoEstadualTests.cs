@@ -33,6 +33,15 @@ namespace DocumentosBrasileiros.Test
             Assert.IsTrue(!errors.Any(), string.Join(". ", errors));
         }
 
+        [TestMethod]
+        public void ValidacaoIe_GO()
+        {
+            var doc = new InscricaoEstadual("200550101", Enums.UfEnum.GO);
+            Assert.IsTrue(doc.DocumentoValido());
+
+            doc = new InscricaoEstadual("103953230", Enums.UfEnum.GO);
+            Assert.IsTrue(doc.DocumentoValido());
+        }
 
         [TestMethod]
         public void ValidacaoIe_Sp()
